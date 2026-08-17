@@ -1,0 +1,10 @@
+{
+  "topBar": {
+    "links": {
+      "aboutMe": "Sobre mi",
+      "career": "Carrera",
+      "projects": "Projectes"
+    },
+    "cv": "CV"
+  }
+}
