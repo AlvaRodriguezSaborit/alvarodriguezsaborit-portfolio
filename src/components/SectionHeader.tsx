@@ -10,10 +10,10 @@ export default function SectionHeader({
   return (
     <div className="flex flex-col">
       <div className="flex flex-row w-full justify-between mb-4 font-mono">
-        <p className="text-gray-500 uppercase">{title}</p>
+        <p className="text-gray-500 uppercase text-lg">{title}</p>
         <p className="text-gray-500">#{index}</p>
       </div>
-      <p className="font-semibold text-2xl">{subtitle}</p>
+      <p className="font-semibold text-4xl">{subtitle}</p>
     </div>
   );
 }

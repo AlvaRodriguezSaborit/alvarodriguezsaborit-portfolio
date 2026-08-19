@@ -53,7 +53,7 @@ export default function Hero() {
                   transition={{ duration: 0.5 }}
                 >
                   <MapPin className="size-5" />
-                  <span>Vila-real, Castellón, España</span>
+                  <span>Vila-real, España</span>
                 </motion.div>
               </div>
             </div>

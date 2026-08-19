@@ -24,7 +24,7 @@ export default function CarrerBoxSection({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <p className="font-mono text-gray-700">
+      <p className="font-mono text-gray-700 w-48 shrink-0">
         {formattedStartDate} - {formattedEndDate}
       </p>
       <div className="flex flex-col gap-2">
