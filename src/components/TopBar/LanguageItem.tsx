@@ -11,7 +11,7 @@ export default function LanguageItem({ lang }: { lang: "en" | "es" | "va" }) {
       <a
         onClick={() => updateLanguage(lang)}
         href="#"
-        className="block px-4 py-2 text-sm text-gray-700 data-focus:bg-gray-100 data-focus:text-gray-900 data-focus:outline-hidden"
+        className="block px-4 py-2 text-sm text-gray-700 data-focus:font-bold data-focus:outline-hidden"
       >
         {languageNames[lang]}
       </a>

@@ -7,30 +7,30 @@ export default function CarrerBoxSection({
   carrerData: CarrerSectionProps;
 }) {
   const formattedStartDate = carrerData.startDate.toLocaleDateString("es-ES", {
-    month: "short",
+    month: "2-digit",
     year: "numeric",
   });
 
   const formattedEndDate =
     carrerData.endDate?.toLocaleDateString("es-ES", {
-      month: "short",
+      month: "2-digit",
       year: "numeric",
     }) || "Actualidad";
 
   return (
     <motion.div
-      className="border-b bg-white hover:bg-amber-50 p-4 flex flex-row gap-2"
+      className=" bg-white hover:bg-amber-50 p-4 rounded-2xl flex flex-row gap-24"
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <p>
+      <p className="font-mono text-gray-700">
         {formattedStartDate} - {formattedEndDate}
       </p>
-      <div className="flex flex-col">
-        <div className="flex flex-row">
-          <p>{carrerData.position}</p>
-          <p>{carrerData.company}</p>
+      <div className="flex flex-col gap-2">
+        <div className="flex flex-row items-center gap-2 text-lg">
+          <span className="font-semibold">{carrerData.position}</span> ·
+          <span className="text-gray-700">{carrerData.company}</span>
         </div>
         <div>
           <p>{carrerData.description}</p>

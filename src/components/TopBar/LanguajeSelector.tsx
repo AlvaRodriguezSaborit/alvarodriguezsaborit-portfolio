@@ -7,7 +7,7 @@ import { languageNames } from "./languagesData";
 export default function LanguajeSelector() {
   return (
     <Menu as="div" className="relative inline-block">
-      <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semibold text-gray-900 inset-ring-gray-300 hover:bg-gray-50">
+      <MenuButton className="inline-flex w-full justify-center gap-x-1.5 px-3 py-2 text-sm font-semibold text-gray-900 ">
         {languageNames[i18n.language]}
         <ChevronDownIcon
           aria-hidden="true"
@@ -17,7 +17,7 @@ export default function LanguajeSelector() {
 
       <MenuItems
         transition
-        className="absolute left-0 z-10 mt-2 w-56 origin-top-right rounded-md  transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
+        className="absolute left-0 z-10 mt-2 w-56 origin-top-right  transition data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
       >
         <div className="py-1">
           <LanguageItem lang="va" />
