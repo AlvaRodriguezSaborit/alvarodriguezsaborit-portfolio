@@ -2,6 +2,7 @@
 import "./App.css";
 import TopBar from "./components/TopBar/TopBar";
 import Carrer from "./sections/Carrer";
+import Contact from "./sections/Contact";
 import Education from "./sections/Education";
 import Hero from "./sections/Hero";
 import Stack from "./sections/Stack";
@@ -15,6 +16,7 @@ function App() {
         <Carrer />
         <Education />
         <Stack />
+        <Contact />
       </div>
     </div>
   );
