@@ -47,7 +47,7 @@ export default function Hero() {
               </div>
               <div className="self-start">
                 <motion.div
-                  className="flex flex-row gap-2 font-semibold bg-white w-fit p-2 rounded-2xl"
+                  className="flex flex-row gap-2 font-semibold bg-white border border-[#d9d7d1] w-fit p-2 rounded-2xl"
                   initial={{ opacity: 0, x: -25 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}

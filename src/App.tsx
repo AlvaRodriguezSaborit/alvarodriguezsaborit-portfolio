@@ -4,6 +4,7 @@ import TopBar from "./components/TopBar/TopBar";
 import Carrer from "./sections/Carrer";
 import Education from "./sections/Education";
 import Hero from "./sections/Hero";
+import Stack from "./sections/Stack";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Carrer />
         <Education />
+        <Stack />
       </div>
     </div>
   );
