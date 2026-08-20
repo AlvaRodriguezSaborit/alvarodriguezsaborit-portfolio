@@ -6,7 +6,7 @@ export default function TopBar() {
   const textLink = " hover:text-[#55810a] cursor-pointer transition-colors";
 
   return (
-    <div className="justify-center items-center mb-4 backdrop-blur-md top-0 z-50 sticky">
+    <div className="justify-center items-center backdrop-blur-md top-0 z-50 fixed w-full">
       <header className="w-full border-b border-b-[#d9d7d1]">
         <div className="max-w-[75%] mx-auto flex flex-row py-4 text-black">
           <div className="flex flex-1 items-center">

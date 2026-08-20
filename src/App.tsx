@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <TopBar />
-      <div className="max-w-[75%] w-full mx-auto flex flex-col divide-y divide-gray-300 *:pb-36 *:pt-6">
-        <Hero />
+      <Hero />
+      <div className="max-w-[75%] w-full mx-auto flex flex-col divide-y divide-gray-300 border-t border-gray-300 *:pb-36 *:pt-6">
         <Carrer />
         <Education />
         <Stack />
