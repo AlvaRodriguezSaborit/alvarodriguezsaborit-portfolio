@@ -10,9 +10,13 @@ export default function Contact() {
         <div className="flex flex-col gap-8 w-1/2">
           <span className="text-3xl text-left">
             Me entusiasma la idea de unirme a un equipo donde pueda colaborar en
-            productos que tengan un impacto real. Si tienes una vacante abierta
-            o crees que mi perfil puede encajar en tu empresa, no dudes en
-            escribirme.
+            productos que tengan un
+            <mark className="bg-[#D5F899] px-2 rounded-sm">impacto real</mark>.
+            Si tienes una vacante abierta o crees que mi perfil puede encajar en
+            tu empresa,
+            <mark className="bg-[#D5F899] px-2 rounded-sm">
+              no dudes en escribirme.
+            </mark>
           </span>
           <SocialLinksList iconSize="size-10" />
         </div>
