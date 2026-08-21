@@ -1,9 +1,7 @@
 import yo from "../assets/yo.png";
 import { motion } from "motion/react";
 import { ArrowUpRight, MapPin, ContactRound } from "lucide-react";
-import GithubIcon from "../icons/GithubIcon";
-import LinkedinIcon from "../icons/LinkedinIcon";
-import SocialLink from "../components/SocialLink";
+import SocialLinksList from "../components/SocialLinksList";
 
 export default function Hero() {
   const year = new Date().getFullYear();
@@ -33,19 +31,7 @@ export default function Hero() {
           {/* Ubication */}
           <div className="flex flex-col justify-between items-start p-8">
             <div></div>
-            <div className="flex flex-col gap-4 ">
-              <SocialLink
-                icon={<GithubIcon className="size-14" />}
-                label="AlvaRodriguezSaborit"
-                externalLink="https://www.linkedin.com/in/%C3%A1lvaro-rodr%C3%ADguez-saborit/"
-              />
-              <SocialLink
-                icon={<LinkedinIcon className="size-14" />}
-                label="Álvaro Rodríguez Saborit"
-                initialDelay={2000}
-                externalLink="https://github.com/AlvaRodriguezSaborit"
-              />
-            </div>
+            <SocialLinksList iconSize="size-14" />
             <div className="self-start">
               <motion.div
                 className="flex flex-row gap-2 font-semibold bg-white border-[#d9d7d1] w-fit p-2 rounded-2xl"
@@ -77,9 +63,10 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
             >
               <div></div>
-              <p className="text-start  font-normal text-2xl">
-                Construyo productos web rápidos, claros y mantenibles, con
-                especial atención al detalle y a las personas que los usan.
+              <p className="text-start font-normal text-2xl leading-relaxed text-black">
+                Desarrollador enfocado en escribir código limpio, escalable y
+                mantenible. Busco unirme a un equipo donde pueda aportar valor
+                desde el primer día y seguir creciendo profesionalmente.
               </p>
               <div className="flex flex-row gap-4 items-center">
                 <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors">
