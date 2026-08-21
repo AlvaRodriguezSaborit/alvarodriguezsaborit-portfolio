@@ -1,10 +1,42 @@
+import { useState, type FormEvent } from "react";
 import ContactFormBoxInput from "./ContactFormBoxInput";
 import { ArrowUpRight } from "lucide-react";
+import Toast from "../ui/Toast";
+import emailjs from "@emailjs/browser";
 
 export default function ContactFormBox() {
-  function handleSubmit(e) {
+  const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_AUTOREPLY_TEMPLATE_ID;
+  const CONTACT_TEMPLATE_ID = import.meta.env.VITE_CONTACT_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+  const [toast, setToast] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
+
+  async function sendMails(form: HTMLFormElement) {
+    await Promise.all([
+      emailjs.sendForm(SERVICE_ID, CONTACT_TEMPLATE_ID, form, {
+        publicKey: PUBLIC_KEY,
+      }),
+      emailjs.sendForm(SERVICE_ID, AUTOREPLY_TEMPLATE_ID, form, {
+        publicKey: PUBLIC_KEY,
+      }),
+    ]);
+  }
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("asds");
+    const form = e.currentTarget;
+
+    try {
+      await sendMails(form);
+      setToast({ message: "¡Mensaje enviado!", type: "success" });
+      form.reset();
+    } catch {
+      setToast({ message: "Error al enviar el mensaje", type: "error" });
+    }
   }
 
   return (
@@ -15,19 +47,34 @@ export default function ContactFormBox() {
       <div className="flex flex-row gap-4">
         <ContactFormBoxInput
           className="w-full"
-          props={{ label: "nombre", placeholder: "Tu nombre" }}
+          props={{
+            label: "nombre",
+            name: "user_name",
+            placeholder: "Tu nombre",
+          }}
         />
         <ContactFormBoxInput
           className="w-full"
-          props={{ label: "email", placeholder: "Tu email", type: "email" }}
+          props={{
+            label: "email",
+            name: "email",
+            placeholder: "Tu email",
+            type: "email",
+          }}
         />
       </div>
       <ContactFormBoxInput
-        props={{ label: "asunto", placeholder: "Asunto", type: "text" }}
+        props={{
+          label: "asunto",
+          name: "subject",
+          placeholder: "Asunto",
+          type: "text",
+        }}
       />
       <ContactFormBoxInput
         props={{
           label: "mensaje",
+          name: "message",
           placeholder: "Tu mensaje",
           type: "textarea",
         }}
@@ -36,6 +83,8 @@ export default function ContactFormBox() {
         Enviar mensaje
         <ArrowUpRight className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </button>
+
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
     </form>
   );
 }

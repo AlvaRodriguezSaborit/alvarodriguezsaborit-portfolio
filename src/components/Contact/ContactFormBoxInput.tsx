@@ -9,18 +9,19 @@ export default function ContactFormBoxInput({
 }) {
   return (
     <label className={`flex flex-col gap-2 relative group ${className}`}>
-      {" "}
       <span className="text-sm font-mono uppercase text-gray-400">
         {props.label}
       </span>
       {props.type === "textarea" ? (
         <textarea
+          name={props.name}
           required
           placeholder={props.placeholder}
           className="h-32 outline-none"
         />
       ) : (
         <input
+          name={props.name}
           type={props.type}
           required
           placeholder={props.placeholder}
