@@ -63,13 +63,11 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
             >
               <div></div>
-              <div className="bg-white/30 backdrop-blur-md border border-white/40 p-6 rounded-2xl">
-                <p className="text-start font-medium text-lg md:text-xl leading-relaxed text-gray-800">
-                  Desarrollador enfocado en escribir código limpio, escalable y
-                  mantenible. Busco unirme a un equipo donde pueda aportar valor
-                  desde el primer día y seguir creciendo profesionalmente.
-                </p>
-              </div>
+              <p className="text-start font-normal text-2xl leading-relaxed text-black">
+                Desarrollador enfocado en escribir código limpio, escalable y
+                mantenible. Busco unirme a un equipo donde pueda aportar valor
+                desde el primer día y seguir creciendo profesionalmente.
+              </p>
               <div className="flex flex-row gap-4 items-center">
                 <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors">
                   Ver proyectos
