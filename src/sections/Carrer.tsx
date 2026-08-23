@@ -1,8 +1,10 @@
 import { motion } from "motion/react";
 import SectionHeader from "../components/SectionHeader";
 import CarrerBox from "../components/Carrer/CarrerBox";
+import { useTranslation } from "react-i18next";
 
 export default function Carrer() {
+  const { t } = useTranslation();
   return (
     <motion.div
       className="flex flex-col"
@@ -12,9 +14,9 @@ export default function Carrer() {
     >
       <div className="mb-16">
         <SectionHeader
-          title="Carrera"
+          title={t("career.title")}
           index={1}
-          subtitle="Dónde he trabajado"
+          subtitle={t("career.subtitle")}
         />
       </div>
 

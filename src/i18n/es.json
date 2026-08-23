@@ -1,7 +1,7 @@
 {
   "topBar": {
     "links": {
-      "aboutMe": "Sobre mi",
+      "aboutMe": "Sobre mí",
       "career": "Carrera",
       "projects": "Proyectos",
       "education": "Educación",
@@ -9,5 +9,90 @@
       "contact": "Contacto"
     },
     "cv": "CV"
+  },
+  "hero": {
+    "greeting": "Hola, soy Mateo",
+    "role": "Software Developer",
+    "location": "Vila-real, España",
+    "bio": "Desarrollador enfocado en escribir código limpio, escalable y mantenible. Busco unirme a un equipo donde pueda aportar valor desde el primer día y seguir creciendo profesionalmente.",
+    "viewProjects": "Ver proyectos",
+    "contact": "Contáctame"
+  },
+  "career": {
+    "title": "Carrera",
+    "subtitle": "Dónde he trabajado",
+    "present": "Actualidad",
+    "tineverse": {
+      "position": "Ingeniero de software",
+      "location": "Benicàssim, España",
+      "description": "• Desarrollé una API REST con Python y FastAPI para centralizar y exponer en tiempo real el estado de todas las pistas de estaciones de esquí de España, implementando un sistema de web scraping para la extracción y actualización automática de los datos.\n• Construí, con TypeScript, React y Next.js, el sistema de control de reproducción audiovisual de una sala inmersiva de proyección 360°, gestionando la emisión de contenido almacenado en Disguise, vídeos de YouTube y retransmisiones en directo propias de la empresa.\n• Implementé un sistema de detección y seguimiento de personas en tiempo real mediante YOLO, enviando las coordenadas obtenidas vía protocolo OSC a Notch para generar efectos visuales interactivos en el suelo de la sala. Diseñé el algoritmo de mapeo geométrico para transformar las coordenadas capturadas por una cámara instalada en pared con inclinación (plano 3D) a un sistema de coordenadas 2D preciso, resolviendo la distorsión de perspectiva de la captura.\n• Desarrollé y mantuve una aplicación web de seguimiento de datos marinos recogidos por boyas y otros sensores, integrando capas WMS/WMTS y representando la información sobre un globo terráqueo 3D interactivo."
+    },
+    "porcelanosa": {
+      "position": "Ingeniero de software en prácticas",
+      "location": "Vila-real, España",
+      "description": "• Desarrollé, como Trabajo de Fin de Grado, una aplicación web de gestión de pedidos con integración de IA generativa para automatizar la extracción de datos de facturas con formato heterogéneo, un proceso que antes se introducía manualmente en el sistema interno de la compañía.\n• El módulo de extracción con IA fue integrado en los procesos reales de la empresa, reduciendo el tiempo de introducción manual de datos."
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Una muestra de proyectos que he desarrollado",
+    "label": "Proyecto",
+    "viewCode": "Ver código",
+    "viewApp": "Ver app en vivo",
+    "lamura": {
+      "title": "La Murà webapp",
+      "description": "Aplicación web full-stack en producción para una heladería artesanal real. Incluye catálogo con disponibilidad en tiempo real, sistema de pedidos con algoritmo de empaquetado de tarrinas, panel de administración completo y notificaciones por Telegram y email. Desplegada en heladerialamura.es y sirviendo a clientes reales."
+    },
+    "portfolio": {
+      "title": "Portfolio Personal",
+      "description": "Portfolio personal diseñado para destacar proyectos y experiencia técnica con un enfoque limpio y moderno. Desarrollado con React y TypeScript, implementa animaciones fluidas con Framer Motion, diseño responsive estructurado con Tailwind CSS y un sistema de contacto automatizado e integrado con EmailJS."
+    }
+  },
+  "education": {
+    "title": "Educación",
+    "subtitle": "Estudios y titulaciones",
+    "degree": {
+      "title": "Grado en Ingeniería Informática",
+      "headerTitle": "Grado",
+      "location": "Castellón de la Plana, España",
+      "description": "Especialización en Ingeniería de Software. Formación integral en desarrollo de aplicaciones, arquitectura de sistemas, bases de datos y buenas prácticas de programación."
+    },
+    "cambridge": {
+      "title": "Certificado por Cambridge de nivel B2",
+      "headerTitle": "Certificado",
+      "location": "Vila-real, España",
+      "description": "Obtención del certificado oficial B2 First de Cambridge, acreditando un nivel intermedio-alto de competencia en el idioma inglés."
+    }
+  },
+  "stack": {
+    "title": "Stack",
+    "subtitle": "Tecnologías y herramientas que utilizo",
+    "languages": "Lenguajes",
+    "frameworks": "Frameworks y librerías",
+    "databases": "Bases de datos",
+    "tools": "Herramientas"
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Trabajemos juntos",
+    "pitch": {
+      "before1": "Me entusiasma la idea de unirme a un equipo donde pueda colaborar en productos que tengan un",
+      "highlight1": "impacto real",
+      "before2": ". Si tienes una vacante abierta o crees que mi perfil puede encajar en tu empresa,",
+      "highlight2": "no dudes en escribirme."
+    },
+    "form": {
+      "name": "nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "email",
+      "emailPlaceholder": "Tu email",
+      "subject": "asunto",
+      "subjectPlaceholder": "Asunto",
+      "message": "mensaje",
+      "messagePlaceholder": "Tu mensaje",
+      "send": "Enviar mensaje",
+      "successMessage": "¡Mensaje enviado!",
+      "errorMessage": "Error al enviar el mensaje"
+    }
   }
 }

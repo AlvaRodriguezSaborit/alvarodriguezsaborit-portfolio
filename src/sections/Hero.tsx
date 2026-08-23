@@ -2,8 +2,10 @@ import yo from "../assets/yo.png";
 import { motion } from "motion/react";
 import { ArrowUpRight, MapPin, ContactRound } from "lucide-react";
 import SocialLinksList from "../components/SocialLinksList";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
 
   return (
@@ -20,9 +22,9 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Hola, soy Mateo <br />
+            {t("hero.greeting")} <br />
             <span className="font-serif italic font-normal tracking-normal">
-              Software Developer
+              {t("hero.role")}
             </span>
           </motion.h1>
         </div>
@@ -40,7 +42,7 @@ export default function Hero() {
                 transition={{ duration: 0.5 }}
               >
                 <MapPin className="size-5" />
-                <span>Vila-real, España</span>
+                <span>{t("hero.location")}</span>
               </motion.div>
             </div>
           </div>
@@ -64,19 +66,21 @@ export default function Hero() {
             >
               <div></div>
               <p className="text-start font-normal text-2xl leading-relaxed text-black">
-                Desarrollador enfocado en escribir código limpio, escalable y
-                mantenible. Busco unirme a un equipo donde pueda aportar valor
-                desde el primer día y seguir creciendo profesionalmente.
+                {t("hero.bio")}
               </p>
               <div className="flex flex-row gap-4 items-center">
-                <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors">
-                  Ver proyectos
-                  <ArrowUpRight className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                </button>
-                <button className="font-semibold inline-flex gap-2 bg-white text-black cursor-pointer border border-gray-300 hover:bg-gray-200 p-2 rounded-lg transition-colors">
-                  Contáctame
-                  <ContactRound />
-                </button>
+                <a href="#projects">
+                  <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors">
+                    {t("hero.viewProjects")}
+                    <ArrowUpRight className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </button>
+                </a>
+                <a href="#contact">
+                  <button className="font-semibold inline-flex gap-2 bg-white text-black cursor-pointer border border-gray-300 hover:bg-gray-200 p-2 rounded-lg transition-colors">
+                    {t("hero.contact")}
+                    <ContactRound />
+                  </button>
+                </a>
               </div>
             </motion.div>
           </div>

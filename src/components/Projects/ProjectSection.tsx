@@ -1,6 +1,7 @@
 import { ArrowUpRight, Radio } from "lucide-react";
 import type { ProjectsSectionProps } from "./projectsData";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectSecion({
   position,
@@ -17,6 +18,7 @@ export default function ProjectSecion({
   position: "left" | "right";
   index: number;
 } & ProjectsSectionProps) {
+  const { t } = useTranslation();
   return (
     <div
       className={`flex flex-row gap-16 items-stretch ${position === "right" ? "flex-row-reverse" : ""}`}
@@ -46,10 +48,10 @@ export default function ProjectSecion({
         {/* Text content */}
         <div className="relative flex flex-col gap-3">
           <span className="text-xs font-mono uppercase tracking-widest text-gray-400">
-            Proyecto {String(index + 1).padStart(2, "0")}
+            {t("projects.label")} {String(index + 1).padStart(2, "0")}
           </span>
-          <span className="text-3xl font-semibold">{title}</span>
-          <p className="text-gray-600 leading-relaxed">{description}</p>
+          <span className="text-3xl font-semibold">{t(title)}</span>
+          <p className="text-gray-600 leading-relaxed">{t(description)}</p>
         </div>
 
         {/* Icons and buttons */}
@@ -64,7 +66,7 @@ export default function ProjectSecion({
             {isCodeAvailable && (
               <a href={codeLink}>
                 <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors">
-                  Ver código
+                  {t("projects.viewCode")}
                   <ArrowUpRight className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </button>
               </a>
@@ -72,7 +74,7 @@ export default function ProjectSecion({
             {isAppInLive && (
               <a href={liveAppLink}>
                 <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-white text-black cursor-pointer border border-[#d9d7d1] hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
-                  Ver app en vivo
+                  {t("projects.viewApp")}
                   <Radio className="size-5 transition-transform duration-400 group-hover:-scale-160 group-hover:text-red-600" />
                 </button>
               </a>

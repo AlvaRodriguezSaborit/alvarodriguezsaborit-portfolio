@@ -9,5 +9,90 @@
       "contact": "Contacte"
     },
     "cv": "CV"
+  },
+  "hero": {
+    "greeting": "Hola, soc Mateo",
+    "role": "Software Developer",
+    "location": "Vila-real, Espanya",
+    "bio": "Desenvolupador enfocat a escriure codi net, escalable i mantenible. Busco unir-me a un equip on puga aportar valor des del primer dia i continuar creixent professionalment.",
+    "viewProjects": "Veure projectes",
+    "contact": "Contacta'm"
+  },
+  "career": {
+    "title": "Carrera",
+    "subtitle": "On he treballat",
+    "present": "Actualitat",
+    "tineverse": {
+      "position": "Enginyer de programari",
+      "location": "Benicàssim, Espanya",
+      "description": "• Vaig desenvolupar una API REST amb Python i FastAPI per centralitzar i exposar en temps real l'estat de totes les pistes d'estacions d'esquí d'Espanya, implementant un sistema de web scraping per a l'extracció i actualització automàtica de les dades.\n• Vaig construir, amb TypeScript, React i Next.js, el sistema de control de reproducció audiovisual d'una sala immersiva de projecció 360°, gestionant l'emissió de contingut emmagatzemat en Disguise, vídeos de YouTube i retransmissions en directe pròpies de l'empresa.\n• Vaig implementar un sistema de detecció i seguiment de persones en temps real mitjançant YOLO, enviant les coordenades obtingudes via protocol OSC a Notch per generar efectes visuals interactius al terra de la sala. Vaig dissenyar l'algorisme de mapeig geomètric per transformar les coordenades capturades per una càmera instal·lada a la paret amb inclinació (pla 3D) a un sistema de coordenades 2D precís, resolent la distorsió de perspectiva de la captura.\n• Vaig desenvolupar i mantenir una aplicació web de seguiment de dades marines recollides per boies i altres sensors, integrant capes WMS/WMTS i representant la informació sobre un globus terraqüi 3D interactiu."
+    },
+    "porcelanosa": {
+      "position": "Enginyer de programari en pràctiques",
+      "location": "Vila-real, Espanya",
+      "description": "• Vaig desenvolupar, com a Treball de Fi de Grau, una aplicació web de gestió de comandes amb integració d'IA generativa per automatitzar l'extracció de dades de factures amb format heterogeni, un procés que abans s'introduïa manualment al sistema intern de la companyia.\n• El mòdul d'extracció amb IA va ser integrat en els processos reals de l'empresa, reduint el temps d'introducció manual de dades."
+    }
+  },
+  "projects": {
+    "title": "Projectes",
+    "subtitle": "Una mostra de projectes que he desenvolupat",
+    "label": "Projecte",
+    "viewCode": "Veure codi",
+    "viewApp": "Veure app en viu",
+    "lamura": {
+      "title": "La Murà webapp",
+      "description": "Aplicació web full-stack en producció per a una gelateria artesanal real. Inclou catàleg amb disponibilitat en temps real, sistema de comandes amb algorisme d'empaquetat de tarrines, panell d'administració complet i notificacions per Telegram i email. Desplegada a heladerialamura.es i servint a clients reals."
+    },
+    "portfolio": {
+      "title": "Portfolio Personal",
+      "description": "Portfolio personal dissenyat per a destacar projectes i experiència tècnica amb un enfocament net i modern. Desenvolupat amb React i TypeScript, implementa animacions fluides amb Framer Motion, disseny responsive estructurat amb Tailwind CSS i un sistema de contacte automatitzat i integrat amb EmailJS."
+    }
+  },
+  "education": {
+    "title": "Educació",
+    "subtitle": "Estudis i titulacions",
+    "degree": {
+      "title": "Grau en Enginyeria Informàtica",
+      "headerTitle": "Grau",
+      "location": "Castelló de la Plana, Espanya",
+      "description": "Especialització en Enginyeria de Programari. Formació integral en desenvolupament d'aplicacions, arquitectura de sistemes, bases de dades i bones pràctiques de programació."
+    },
+    "cambridge": {
+      "title": "Certificat per Cambridge de nivell B2",
+      "headerTitle": "Certificat",
+      "location": "Vila-real, Espanya",
+      "description": "Obtenció del certificat oficial B2 First de Cambridge, acreditant un nivell intermedi-alt de competència en l'idioma anglés."
+    }
+  },
+  "stack": {
+    "title": "Stack",
+    "subtitle": "Tecnologies i eines que utilitze",
+    "languages": "Llenguatges",
+    "frameworks": "Frameworks i llibreries",
+    "databases": "Bases de dades",
+    "tools": "Eines"
+  },
+  "contact": {
+    "title": "Contacte",
+    "subtitle": "Treballem junts",
+    "pitch": {
+      "before1": "M'entusiasma la idea d'unir-me a un equip on puga col·laborar en productes amb un",
+      "highlight1": "impacte real",
+      "before2": ". Si tens una vacant oberta o creus que el meu perfil pot encaixar a la teua empresa,",
+      "highlight2": "no dubtes a escriure'm."
+    },
+    "form": {
+      "name": "nom",
+      "namePlaceholder": "El teu nom",
+      "email": "email",
+      "emailPlaceholder": "El teu email",
+      "subject": "assumpte",
+      "subjectPlaceholder": "Assumpte",
+      "message": "missatge",
+      "messagePlaceholder": "El teu missatge",
+      "send": "Enviar missatge",
+      "successMessage": "Missatge enviat!",
+      "errorMessage": "Error en enviar el missatge"
+    }
   }
 }

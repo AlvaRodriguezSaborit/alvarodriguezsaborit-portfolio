@@ -31,7 +31,7 @@ export interface StackSectionData {
 
 export const stackData: StackSectionData[] = [
   {
-    title: "Lenguajes",
+    title: "stack.languages",
     iconsData: [
       { name: "TypeScript", icon: TypeScriptIcon },
       //{ name: "JavaScript", icon: JavasScriptIcon },
@@ -43,7 +43,7 @@ export const stackData: StackSectionData[] = [
     ],
   },
   {
-    title: "Frameworks y librerías",
+    title: "stack.frameworks",
     iconsData: [
       { name: "React", icon: ReactIcon },
       { name: "Vue", icon: VueIcon },
@@ -58,7 +58,7 @@ export const stackData: StackSectionData[] = [
     ],
   },
   {
-    title: "Bases de datos",
+    title: "stack.databases",
     iconsData: [
       { name: "PostgreSQL", icon: PostgresqlIcon },
       { name: "MySQL", icon: MysqlIcon },
@@ -67,7 +67,7 @@ export const stackData: StackSectionData[] = [
     ],
   },
   {
-    title: "Herramientas",
+    title: "stack.tools",
     iconsData: [
       { name: "Git", icon: GitIcon },
 

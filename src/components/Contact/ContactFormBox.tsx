@@ -3,8 +3,10 @@ import ContactFormBoxInput from "./ContactFormBoxInput";
 import { ArrowUpRight } from "lucide-react";
 import Toast from "../ui/Toast";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 export default function ContactFormBox() {
+  const { t } = useTranslation();
   const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const AUTOREPLY_TEMPLATE_ID = import.meta.env.VITE_AUTOREPLY_TEMPLATE_ID;
   const CONTACT_TEMPLATE_ID = import.meta.env.VITE_CONTACT_TEMPLATE_ID;
@@ -32,10 +34,10 @@ export default function ContactFormBox() {
 
     try {
       await sendMails(form);
-      setToast({ message: "¡Mensaje enviado!", type: "success" });
+      setToast({ message: t("contact.form.successMessage"), type: "success" });
       form.reset();
     } catch {
-      setToast({ message: "Error al enviar el mensaje", type: "error" });
+      setToast({ message: t("contact.form.errorMessage"), type: "error" });
     }
   }
 
@@ -48,39 +50,39 @@ export default function ContactFormBox() {
         <ContactFormBoxInput
           className="w-full"
           props={{
-            label: "nombre",
+            label: t("contact.form.name"),
             name: "user_name",
-            placeholder: "Tu nombre",
+            placeholder: t("contact.form.namePlaceholder"),
           }}
         />
         <ContactFormBoxInput
           className="w-full"
           props={{
-            label: "email",
+            label: t("contact.form.email"),
             name: "email",
-            placeholder: "Tu email",
+            placeholder: t("contact.form.emailPlaceholder"),
             type: "email",
           }}
         />
       </div>
       <ContactFormBoxInput
         props={{
-          label: "asunto",
+          label: t("contact.form.subject"),
           name: "subject",
-          placeholder: "Asunto",
+          placeholder: t("contact.form.subjectPlaceholder"),
           type: "text",
         }}
       />
       <ContactFormBoxInput
         props={{
-          label: "mensaje",
+          label: t("contact.form.message"),
           name: "message",
-          placeholder: "Tu mensaje",
+          placeholder: t("contact.form.messagePlaceholder"),
           type: "textarea",
         }}
       />
       <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors">
-        Enviar mensaje
+        {t("contact.form.send")}
         <ArrowUpRight className="size-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
       </button>
 

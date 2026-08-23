@@ -1,21 +1,25 @@
 import type { CarrerSectionProps } from "./CarrerData";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 export default function CarrerBoxSection({
   carrerData,
 }: {
   carrerData: CarrerSectionProps;
 }) {
-  const formattedStartDate = carrerData.startDate.toLocaleDateString("es-ES", {
+  const { t } = useTranslation();
+  const locale = i18n.language === "en" ? "en-GB" : "es-ES";
+  const formattedStartDate = carrerData.startDate.toLocaleDateString(locale, {
     month: "2-digit",
     year: "numeric",
   });
 
   const formattedEndDate =
-    carrerData.endDate?.toLocaleDateString("es-ES", {
+    carrerData.endDate?.toLocaleDateString(locale, {
       month: "2-digit",
       year: "numeric",
-    }) || "Actualidad";
+    }) || t("career.present");
 
   return (
     <motion.div
@@ -28,12 +32,15 @@ export default function CarrerBoxSection({
         {formattedStartDate} - {formattedEndDate}
       </p>
       <div className="flex flex-col gap-2">
-        <div className="flex flex-row items-center gap-2 text-lg">
-          <span className="font-semibold">{carrerData.position}</span> ·
-          <span className="text-gray-700">{carrerData.company}</span>
+        <div className="flex flex-row gap-2 items-center">
+          <span className="font-semibold">{t(carrerData.position)}</span>
+          <span className="text-gray-500">|</span>
+          <span className="text-gray-700">
+            {carrerData.company} - {t(carrerData.location)}
+          </span>
         </div>
         <div>
-          <p>{carrerData.description}</p>
+          <p className="text-gray-700 whitespace-pre-line leading-relaxed">{t(carrerData.description)}</p>
         </div>
       </div>
     </motion.div>

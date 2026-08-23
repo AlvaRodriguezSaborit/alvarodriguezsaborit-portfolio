@@ -2,13 +2,15 @@ import SectionHeader from "../components/SectionHeader";
 import { educationData } from "../components/Education/educationData";
 import EducationBox from "../components/Education/EducationBox";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
 
 export default function Education() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-16">
       <SectionHeader
-        title="Educación"
-        subtitle="Estudios y titulaciones"
+        title={t("education.title")}
+        subtitle={t("education.subtitle")}
         index={2}
       />
       <div className="flex flex-row gap-20">

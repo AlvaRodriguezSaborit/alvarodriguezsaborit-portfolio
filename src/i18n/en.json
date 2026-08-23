@@ -2,12 +2,97 @@
   "topBar": {
     "links": {
       "aboutMe": "About me",
-      "career": "Carrer",
+      "career": "Career",
       "projects": "Projects",
       "education": "Education",
       "stack": "Stack",
       "contact": "Contact"
     },
     "cv": "CV"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Mateo",
+    "role": "Software Developer",
+    "location": "Vila-real, Spain",
+    "bio": "Developer focused on writing clean, scalable and maintainable code. Looking to join a team where I can add value from day one and keep growing professionally.",
+    "viewProjects": "View projects",
+    "contact": "Contact me"
+  },
+  "career": {
+    "title": "Career",
+    "subtitle": "Where I've worked",
+    "present": "Present",
+    "tineverse": {
+      "position": "Software Engineer",
+      "location": "Benicàssim, Spain",
+      "description": "• Developed a REST API with Python and FastAPI to centralize and expose real-time status of all ski resort slopes in Spain, implementing a web scraping system for automatic data extraction and updating.\n• Built the audiovisual playback control system for a 360° immersive projection room using TypeScript, React, and Next.js, managing the broadcast of content stored in Disguise, YouTube videos, and the company's own live streams.\n• Implemented a real-time people detection and tracking system using YOLO, sending the obtained coordinates via OSC protocol to Notch to generate interactive visual effects on the room's floor. Designed the geometric mapping algorithm to transform coordinates captured by a wall-mounted camera with inclination (3D plane) to a precise 2D coordinate system, resolving capture perspective distortion.\n• Developed and maintained a marine data tracking web application using data collected by buoys and other sensors, integrating WMS/WMTS layers and representing the information on an interactive 3D globe."
+    },
+    "porcelanosa": {
+      "position": "Software Engineer Intern",
+      "location": "Vila-real, Spain",
+      "description": "• Developed, as my Bachelor's Thesis, an order management web application with generative AI integration to automate data extraction from heterogeneous invoices, a process that was previously entered manually into the company's internal system.\n• The AI extraction module was integrated into the company's real processes, significantly reducing manual data entry time."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of projects I've built",
+    "label": "Project",
+    "viewCode": "View code",
+    "viewApp": "View live app",
+    "lamura": {
+      "title": "La Murà webapp",
+      "description": "Full-stack web application in production for a real artisanal ice cream shop. Includes a real-time availability catalog, an order system with a tub-packing algorithm, a complete admin panel, and Telegram and email notifications. Deployed at heladerialamura.es and serving real customers."
+    },
+    "portfolio": {
+      "title": "Personal Portfolio",
+      "description": "Personal portfolio designed to showcase projects and technical experience with a clean and modern approach. Developed with React and TypeScript, it implements smooth animations with Framer Motion, a structured responsive design with Tailwind CSS, and an automated contact system integrated with EmailJS."
+    }
+  },
+  "education": {
+    "title": "Education",
+    "subtitle": "Degrees and certifications",
+    "degree": {
+      "title": "Bachelor's Degree in Computer Engineering",
+      "headerTitle": "Degree",
+      "location": "Castellón de la Plana, Spain",
+      "description": "Specialization in Software Engineering. Comprehensive training in application development, system architecture, databases, and programming best practices."
+    },
+    "cambridge": {
+      "title": "Cambridge B2 First Certificate",
+      "headerTitle": "Certificate",
+      "location": "Vila-real, Spain",
+      "description": "Official Cambridge B2 First certificate, certifying an upper-intermediate level of English proficiency."
+    }
+  },
+  "stack": {
+    "title": "Stack",
+    "subtitle": "Technologies and tools I use",
+    "languages": "Languages",
+    "frameworks": "Frameworks and libraries",
+    "databases": "Databases",
+    "tools": "Tools"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's work together",
+    "pitch": {
+      "before1": "I'm excited about the idea of joining a team where I can collaborate on products with a",
+      "highlight1": "real impact",
+      "before2": ". If you have an open role or think my profile could be a good fit,",
+      "highlight2": "don't hesitate to reach out."
+    },
+    "form": {
+      "name": "name",
+      "namePlaceholder": "Your name",
+      "email": "email",
+      "emailPlaceholder": "Your email",
+      "subject": "subject",
+      "subjectPlaceholder": "Subject",
+      "message": "message",
+      "messagePlaceholder": "Your message",
+      "send": "Send message",
+      "successMessage": "Message sent!",
+      "errorMessage": "Error sending message"
+    }
   }
 }

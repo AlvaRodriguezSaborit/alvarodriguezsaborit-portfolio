@@ -1,13 +1,15 @@
 import SectionHeader from "../components/SectionHeader";
 import { stackData } from "../components/Stack/stackData";
 import StackSection from "../components/Stack/StackSection";
+import { useTranslation } from "react-i18next";
 
 export default function Stack() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-16">
       <SectionHeader
-        title="Stack"
-        subtitle="Tecnologías y herramientas que utilizo"
+        title={t("stack.title")}
+        subtitle={t("stack.subtitle")}
         index={3}
       />
       <div className="flex flex-col gap-12">
