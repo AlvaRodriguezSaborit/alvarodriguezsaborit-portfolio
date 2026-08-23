@@ -3,7 +3,10 @@
     "links": {
       "aboutMe": "About me",
       "career": "Carrer",
-      "projects": "Projects"
+      "projects": "Projects",
+      "education": "Education",
+      "stack": "Stack",
+      "contact": "Contact"
     },
     "cv": "CV"
   }

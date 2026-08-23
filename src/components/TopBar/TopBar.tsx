@@ -4,11 +4,8 @@ import i18n from "../../i18n";
 
 export default function TopBar() {
   const { t } = useTranslation();
-  const textLink = " hover:text-[#55810a] cursor-pointer transition-colors";
-  const hrefCv =
-    i18n.language !== "en"
-      ? "../../../public/cv.pdf"
-      : "../../../public/cv-english.pdf";
+  const textLink = " hover:text-gray-500 cursor-pointer transition-colors";
+  const hrefCv = i18n.language !== "en" ? "/cv.pdf" : "/cv-english.pdf";
 
   return (
     <div className="justify-center items-center backdrop-blur-md top-0 z-50 fixed w-full">
@@ -19,9 +16,24 @@ export default function TopBar() {
           </div>
 
           <div className="flex flex-row justify-center items-center gap-6">
-            <span className={textLink}>{t("topBar.links.aboutMe")}</span>
-            <span className={textLink}>{t("topBar.links.career")}</span>
-            <span className={textLink}>{t("topBar.links.projects")}</span>
+            <a href="#aboutMe" className={textLink}>
+              {t("topBar.links.aboutMe")}
+            </a>
+            <a href="#career" className={textLink}>
+              {t("topBar.links.career")}
+            </a>
+            <a href="#projects" className={textLink}>
+              {t("topBar.links.projects")}
+            </a>
+            <a href="#education" className={textLink}>
+              {t("topBar.links.education")}
+            </a>
+            <a href="#stack" className={textLink}>
+              {t("topBar.links.stack")}
+            </a>
+            <a href="#contact" className={textLink}>
+              {t("topBar.links.contact")}
+            </a>
           </div>
 
           <div className="flex flex-1 justify-end items-center gap-2">

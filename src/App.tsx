@@ -12,13 +12,15 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <TopBar />
-      <Hero />
+      <div id="aboutMe">
+        <Hero />
+      </div>
       <div className="max-w-[75%] w-full mx-auto flex flex-col divide-y divide-gray-300 border-t border-gray-300 *:pb-36 *:pt-6">
-        <Carrer />
-        <Projects />
-        <Education />
-        <Stack />
-        <Contact />
+        <div id="career"><Carrer /></div>
+        <div id="projects"><Projects /></div>
+        <div id="education"><Education /></div>
+        <div id="stack"><Stack /></div>
+        <div id="contact"><Contact /></div>
       </div>
     </div>
   );
