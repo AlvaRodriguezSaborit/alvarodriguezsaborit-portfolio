@@ -1,5 +1,5 @@
-import lamuraImage from "../../../public/lamura-screenshot.png";
-import portfolioImage from "../../../public/portfolio-screenshot.png";
+import lamuraImage from "../../assets/lamura-screenshot.png";
+import portfolioImage from "../../assets/portfolio-screenshot.png";
 import type { StackIconData } from "../Stack/stackData";
 import TypeScriptIcon from "../../icons/TypescriptIcon";
 import VueIcon from "../../icons/VueIcon";

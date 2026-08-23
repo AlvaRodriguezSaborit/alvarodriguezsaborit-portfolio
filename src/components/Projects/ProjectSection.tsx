@@ -24,7 +24,8 @@ export default function ProjectSecion({
       <motion.img
         initial={{ opacity: 0, x: position === "right" ? 50 : -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.5 }}
+        whileHover={{ scale: 1.05 }}
         className="w-1/2 object-cover border border-[#d9d7d1] rounded-2xl"
         src={image}
         alt={title}
@@ -32,7 +33,7 @@ export default function ProjectSecion({
       <motion.div
         initial={{ opacity: 0, x: position === "left" ? 50 : -50 }}
         whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.25 }}
+        transition={{ duration: 0.5 }}
         className="relative flex flex-col gap-4 justify-between overflow-hidden"
       >
         {/* Decorative index */}
