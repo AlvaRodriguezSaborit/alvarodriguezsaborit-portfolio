@@ -2,11 +2,17 @@ import ContactFormBox from "../components/Contact/ContactFormBox";
 import SectionHeader from "../components/SectionHeader";
 import SocialLinksList from "../components/SocialLinksList";
 import { useTranslation } from "react-i18next";
+import { motion } from "motion/react";
 
 export default function Contact() {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col gap-16">
+    <motion.div
+      className="flex flex-col gap-16"
+      initial={{ opacity: 0, y: 25 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <SectionHeader
         title={t("contact.title")}
         subtitle={t("contact.subtitle")}
@@ -29,6 +35,6 @@ export default function Contact() {
 
         <ContactFormBox />
       </div>
-    </div>
+    </motion.div>
   );
 }
