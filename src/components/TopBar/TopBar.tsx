@@ -3,13 +3,20 @@ import { useTranslation } from "react-i18next";
 import LanguajeSelector from "./LanguajeSelector";
 import i18n from "../../i18n";
 import { Menu, X } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useScroll, useSpring } from "motion/react";
 
 export default function TopBar() {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const textLink = " hover:text-gray-500 cursor-pointer transition-colors";
   const hrefCv = i18n.language !== "en" ? "/cv.pdf" : "/cv-english.pdf";
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   const navLinks = [
     { href: "#aboutMe", label: t("topBar.links.aboutMe") },
@@ -32,7 +39,11 @@ export default function TopBar() {
               alvarodriguez
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
-                transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1,
+                  ease: "easeInOut",
+                }}
                 className="ml-0.5"
               >
                 _
@@ -62,7 +73,11 @@ export default function TopBar() {
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
-              {menuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+              {menuOpen ? (
+                <X className="size-6" />
+              ) : (
+                <Menu className="size-6" />
+              )}
             </button>
           </div>
         </div>
@@ -93,6 +108,10 @@ export default function TopBar() {
           )}
         </AnimatePresence>
       </header>
+      <motion.div
+        className="h-0.5 bg-black origin-left w-full"
+        style={{ scaleX }}
+      />
     </div>
   );
 }
