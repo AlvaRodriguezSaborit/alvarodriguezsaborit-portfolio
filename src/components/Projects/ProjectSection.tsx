@@ -73,7 +73,7 @@ export default function ProjectSecion({
               <a href={liveAppLink}>
                 <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-white text-black cursor-pointer border border-[#d9d7d1] hover:bg-gray-50 px-4 py-2 rounded-lg transition-colors">
                   Ver app en vivo
-                  <Radio className="size-5 transition-transform duration-200 group-hover:-scale-160 group-hover:text-red-600" />
+                  <Radio className="size-5 transition-transform duration-400 group-hover:-scale-160 group-hover:text-red-600" />
                 </button>
               </a>
             )}
