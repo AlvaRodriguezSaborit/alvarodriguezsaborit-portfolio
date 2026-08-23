@@ -25,7 +25,19 @@ export default function TopBar() {
       <header className="w-full border-b border-b-[#d9d7d1]">
         <div className="w-full px-6 md:max-w-[75%] md:px-0 mx-auto flex flex-row py-4 text-black">
           <div className="flex flex-1 items-center">
-            <span className={textLink}>alvarodriguez</span>
+            <a
+              href="#aboutMe"
+              className="flex items-center text-black hover:text-gray-500 transition-colors font-mono font-semibold text-lg"
+            >
+              alvarodriguez
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+                className="ml-0.5"
+              >
+                _
+              </motion.span>
+            </a>
           </div>
 
           {/* Desktop nav */}
