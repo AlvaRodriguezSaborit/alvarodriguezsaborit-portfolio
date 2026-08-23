@@ -6,7 +6,7 @@ export default function EducationBoxHeader({
 }: {
   title: string;
   yearStart: number;
-  yearEnd: number;
+  yearEnd?: number;
   icon: React.ElementType;
 }) {
   return (
