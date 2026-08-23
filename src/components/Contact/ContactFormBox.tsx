@@ -44,9 +44,9 @@ export default function ContactFormBox() {
   return (
     <form
       onSubmit={handleSubmit}
-      className=" w-1/2 flex flex-col gap-6 h-fit border border-[#d9d7d1] p-8 rounded-lg"
+      className="w-full md:w-1/2 flex flex-col gap-6 h-fit border border-[#d9d7d1] p-6 md:p-8 rounded-lg"
     >
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row">
         <ContactFormBoxInput
           className="w-full"
           props={{

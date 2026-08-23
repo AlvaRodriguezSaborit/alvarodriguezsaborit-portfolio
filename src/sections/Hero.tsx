@@ -9,15 +9,15 @@ export default function Hero() {
   const year = new Date().getFullYear();
 
   return (
-    <section className="w-full h-screen relative bg-linear-to-b from-[#FDFBF7] to-[#D5F899] flex flex-col overflow-hidden mb-36">
-      <div className="z-10 flex flex-col items-center text-center max-w-[75%] mx-auto w-full h-full justify-between pt-24">
+    <section className="w-full min-h-screen relative bg-linear-to-b from-[#FDFBF7] to-[#D5F899] flex flex-col overflow-hidden mb-16 md:mb-36">
+      <div className="z-10 flex flex-col items-center text-center max-w-[90%] md:max-w-[75%] mx-auto w-full flex-1 justify-between pt-24 pb-12 md:pb-0">
         <div className="flex flex-col items-center">
-          <span className="mb-8 text-xs font-semibold tracking-[0.2em] text-gray-600 uppercase">
+          <span className="mb-4 md:mb-8 text-xs font-semibold tracking-[0.2em] text-gray-600 uppercase">
             PORTFOLIO · {year}
           </span>
 
           <motion.h1
-            className="text-6xl font-bold tracking-tight text-black md:text-9xl"
+            className="text-6xl sm:text-6xl font-bold tracking-tight text-black md:text-9xl"
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -29,7 +29,49 @@ export default function Hero() {
           </motion.h1>
         </div>
 
-        <div className="grid grid-cols-3 gap-4 w-full">
+        {/* Mobile layout */}
+        <div className="flex flex-col items-center gap-8 md:hidden mt-8">
+          <motion.img
+            src={yo}
+            alt="Profile picture"
+            className="p-0! object-cover h-auto grayscale hover:grayscale-0 transition-all duration-300 w-full max-w-xs shadow-xl"
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2 }}
+          />
+          <p className="text-center font-normal text-lg leading-relaxed text-black max-w-md">
+            {t("hero.bio")}
+          </p>
+          <div className="flex flex-row gap-4 items-center">
+            <a href="#projects">
+              <button className="group items-center font-semibold w-fit inline-flex gap-2 bg-black text-white cursor-pointer border border-black hover:bg-gray-950 px-4 py-2 rounded-lg transition-colors text-sm">
+                {t("hero.viewProjects")}
+                <ArrowUpRight className="size-4 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
+              </button>
+            </a>
+            <a href="#contact">
+              <button className="font-semibold inline-flex gap-2 bg-white text-black cursor-pointer border border-gray-300 hover:bg-gray-200 p-2 rounded-lg transition-colors text-sm">
+                {t("hero.contact")}
+                <ContactRound className="size-4" />
+              </button>
+            </a>
+          </div>
+          <div className="flex flex-row items-center gap-4">
+            <motion.div
+              className="flex flex-row gap-2 font-semibold bg-white border-[#d9d7d1] w-fit p-2 rounded-2xl text-sm"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <MapPin className="size-4" />
+              <span>{t("hero.location")}</span>
+            </motion.div>
+            <SocialLinksList iconSize="size-8" />
+          </div>
+        </div>
+
+        {/* Desktop layout */}
+        <div className="hidden md:grid grid-cols-3 gap-4 w-full">
           {/* Ubication */}
           <div className="flex flex-col justify-between items-start p-8">
             <div></div>

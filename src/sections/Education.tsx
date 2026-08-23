@@ -13,7 +13,7 @@ export default function Education() {
         subtitle={t("education.subtitle")}
         index={2}
       />
-      <div className="flex flex-row gap-20">
+      <div className="flex flex-col gap-8 md:flex-row md:gap-20">
         {educationData.map((educationDataBox, index) => (
           <motion.div
             key={index}
@@ -21,7 +21,7 @@ export default function Education() {
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ y: -20 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            className="w-1/3 flex"
+            className="w-full md:w-1/3 flex"
           >
             <EducationBox educationBoxData={educationDataBox} />
           </motion.div>

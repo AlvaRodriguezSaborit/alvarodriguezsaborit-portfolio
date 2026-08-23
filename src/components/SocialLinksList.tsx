@@ -9,7 +9,7 @@ export default function SocialLinksList({
   iconSize?: string;
 }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-row md:flex-col gap-4 md:gap-4">
       <SocialLink
         icon={<GithubIcon className={iconSize} />}
         label="AlvaRodriguezSaborit"

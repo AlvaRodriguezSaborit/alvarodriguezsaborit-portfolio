@@ -40,7 +40,7 @@ export default function SocialLink({
           x: showLabel ? 0 : -10,
         }}
         transition={{ duration: 0.3 }}
-        className="bg-white p-2 rounded-2xl font-semibold"
+        className="bg-white p-2 rounded-2xl font-semibold hidden sm:inline-flex text-sm md:text-base"
       >
         {label}
       </motion.span>

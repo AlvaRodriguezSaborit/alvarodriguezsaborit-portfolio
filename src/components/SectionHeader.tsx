@@ -13,7 +13,7 @@ export default function SectionHeader({
         <p className="text-gray-500 uppercase text-lg">{title}</p>
         <p className="text-gray-500">#{index}</p>
       </div>
-      <p className="font-semibold text-4xl">{subtitle}</p>
+      <p className="font-semibold text-2xl md:text-4xl">{subtitle}</p>
     </div>
   );
 }
