@@ -1,9 +1,14 @@
 import { useTranslation } from "react-i18next";
 import LanguajeSelector from "./LanguajeSelector";
+import i18n from "../../i18n";
 
 export default function TopBar() {
   const { t } = useTranslation();
   const textLink = " hover:text-[#55810a] cursor-pointer transition-colors";
+  const hrefCv =
+    i18n.language !== "en"
+      ? "../../../public/cv.pdf"
+      : "../../../public/cv-english.pdf";
 
   return (
     <div className="justify-center items-center backdrop-blur-md top-0 z-50 fixed w-full">
@@ -20,7 +25,11 @@ export default function TopBar() {
           </div>
 
           <div className="flex flex-1 justify-end items-center gap-2">
-            <span className={textLink}>{t("topBar.cv")}</span>
+            <span className={textLink}>
+              <a href={hrefCv} target="_blank" rel="noopener noreferrer">
+                {t("topBar.cv")}
+              </a>
+            </span>
             <LanguajeSelector />
           </div>
         </div>
