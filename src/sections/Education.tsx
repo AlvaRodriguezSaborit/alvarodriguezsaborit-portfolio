@@ -11,7 +11,7 @@ export default function Education() {
       <SectionHeader
         title={t("education.title")}
         subtitle={t("education.subtitle")}
-        index={2}
+        index={3}
       />
       <div className="flex flex-col gap-8 md:flex-row md:gap-20">
         {educationData.map((educationDataBox, index) => (
