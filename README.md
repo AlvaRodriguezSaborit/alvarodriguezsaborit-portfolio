@@ -63,6 +63,22 @@ src/
 
 ---
 
+## Cómo usar como Template
+
+Aunque este proyecto fue diseñado como mi portfolio personal, eres completamente libre de usarlo como plantilla para el tuyo (forkearlo o clonarlo).
+
+Toda la información y contenido de la página está externalizada en archivos de datos, por lo que adaptarlo a tu propio perfil es muy sencillo. Solo necesitas editar los siguientes archivos:
+
+- **`src/i18n/`**: Archivos JSON (`es.json`, `en.json`, `va.json`) con los textos principales de la interfaz.
+- **`src/components/Carrer/carrerData.ts`**: Datos de tu experiencia profesional.
+- **`src/components/Education/educationData.ts`**: Datos de tu formación académica.
+- **`src/components/Projects/projectsData.ts`**: Información y enlaces de tus proyectos.
+- **`src/components/Stack/stackData.ts`**: Las tecnologías que usas (los iconos están en `src/icons/`).
+- **`src/assets/`**: Sustituye las imágenes por las tuyas (foto de perfil, capturas de proyectos).
+- **`public/`**: Reemplaza los PDFs de tu CV y el favicon.
+
+---
+
 ## Ejecutar en local
 
 ```bash
