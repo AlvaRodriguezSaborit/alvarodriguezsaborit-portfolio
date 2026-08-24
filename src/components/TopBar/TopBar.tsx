@@ -34,9 +34,9 @@ export default function TopBar() {
           <div className="flex flex-1 items-center">
             <a
               href="#aboutMe"
-              className="flex items-center text-black hover:text-gray-500 transition-colors font-mono font-semibold text-lg"
+              className="flex items-center text-black hover:text-gray-500 transition-colors font-mono font-semibold text-sm"
             >
-              alvarodriguez
+              alvarodriguezsabor.it
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
                 transition={{
