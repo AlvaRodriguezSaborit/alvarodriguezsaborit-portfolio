@@ -9,7 +9,10 @@ export default function TopBar() {
   const { t } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
   const textLink = " hover:text-gray-500 cursor-pointer transition-colors";
-  const hrefCv = i18n.language !== "en" ? "/cv.pdf" : "/cv-english.pdf";
+  const hrefCv =
+    i18n.language !== "en"
+      ? "/cv_alvarorodriguez_programador.pdf"
+      : "/cv_alvarorodriguez_developer.pdf";
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
