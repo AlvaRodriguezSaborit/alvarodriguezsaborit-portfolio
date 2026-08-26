@@ -10,7 +10,7 @@ export default function Stack() {
       <SectionHeader
         title={t("stack.title")}
         subtitle={t("stack.subtitle")}
-        index={3}
+        index={4}
       />
       <div className="flex flex-col gap-12">
         {stackData.map((section, index) => (

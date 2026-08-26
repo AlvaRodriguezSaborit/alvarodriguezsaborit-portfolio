@@ -1,75 +1,117 @@
-# React + TypeScript + Vite
+# Álvaro Rodríguez Saborit - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio personal construido con React, TypeScript y Tailwind CSS. Diseñado como una single-page application con navegación por secciones, animaciones de scroll, soporte multilingüe (ES/EN/VA) y formulario de contacto funcional.
 
-Currently, two official plugins are available:
+![Portfolio preview](./docs/preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🔗 **[Ver en vivo →](https://alvarodriguezsabor.it)**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Secciones
 
-## Expanding the ESLint configuration
+| Sección         | Descripción                                                                                 |
+| --------------- | ------------------------------------------------------------------------------------------- |
+| **Hero**        | Presentación con foto, enlaces sociales (GitHub, LinkedIn, email) y degradado animado       |
+| **Trayectoria** | Experiencia profesional con timeline vertical                                               |
+| **Proyectos**   | Tarjetas con layout alternado, iconos de stack y enlaces a código/demo                      |
+| **Educación**   | Formación académica                                                                         |
+| **Stack**       | Tecnologías organizadas por categoría (lenguajes, frameworks, bases de datos, herramientas) |
+| **Contacto**    | Formulario con envío de email vía EmailJS + auto-reply al remitente                         |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Stack del proyecto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 19** + **TypeScript** - SPA con componentes tipados
+- **Tailwind CSS 4** - Estilos utility-first, diseño responsive mobile-first
+- **Framer Motion** - Animaciones de entrada, hover y scroll (vía `motion/react`)
+- **i18next** - Internacionalización en español, inglés y valenciano
+- **EmailJS** - Envío de formulario de contacto sin backend
+- **Lucide React** - Iconografía
+- **Vite** - Bundler y dev server
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Estructura del proyecto
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+src/
+├── assets/              # Imágenes y recursos estáticos
+├── components/
+│   ├── Carrer/          # Timeline de experiencia profesional
+│   ├── Contact/         # Formulario de contacto + inputs
+│   ├── Education/       # Tarjetas de formación
+│   ├── Projects/        # Tarjetas de proyectos + datos
+│   ├── Stack/           # Grid de tecnologías + iconos
+│   ├── TopBar/          # Navbar fija con barra de progreso de scroll
+│   ├── ui/              # Componentes genéricos (Toast)
+│   ├── SocialLink.tsx   # Enlace social con animación de texto
+│   └── SocialLinksList.tsx
+├── i18n/                # Archivos de traducción (es, en, va)
+├── icons/               # Componentes SVG de cada tecnología
+├── sections/            # Secciones principales de la página
+│   ├── Hero.tsx
+│   ├── Carrer.tsx
+│   ├── Projects.tsx
+│   ├── Education.tsx
+│   ├── Stack.tsx
+│   └── Contact.tsx
+├── App.tsx              # Layout principal con navegación por anclas
+└── main.tsx             # Entry point
 ```
+
+---
+
+## Cómo usar como Template
+
+Aunque este proyecto fue diseñado como mi portfolio personal, eres completamente libre de usarlo como plantilla para el tuyo (forkearlo o clonarlo).
+
+Toda la información y contenido de la página está externalizada en archivos de datos, por lo que adaptarlo a tu propio perfil es muy sencillo. Solo necesitas editar los siguientes archivos:
+
+- **`src/i18n/`**: Archivos JSON (`es.json`, `en.json`, `va.json`) con los textos principales de la interfaz.
+- **`src/components/Carrer/carrerData.ts`**: Datos de tu experiencia profesional.
+- **`src/components/Education/educationData.ts`**: Datos de tu formación académica.
+- **`src/components/Projects/projectsData.ts`**: Información y enlaces de tus proyectos.
+- **`src/components/Stack/stackData.ts`**: Las tecnologías que usas (los iconos están en `src/icons/`).
+- **`src/assets/`**: Sustituye las imágenes por las tuyas (foto de perfil, capturas de proyectos).
+- **`public/`**: Reemplaza los PDFs de tu CV y el favicon.
+
+---
+
+## Ejecutar en local
+
+```bash
+git clone https://github.com/AlvaRodriguezSaborit/alvarodriguezsaborit-portfolio.git
+cd alvarodriguezsaborit-portfolio
+npm install
+```
+
+Crea un archivo `.env` en la raíz con tus credenciales de EmailJS:
+
+```env
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+VITE_CONTACT_TEMPLATE_ID=tu_template_contacto
+VITE_AUTOREPLY_TEMPLATE_ID=tu_template_autoreply
+```
+
+```bash
+npm run dev
+```
+
+La app estará disponible en `http://localhost:5173`.
+
+---
+
+## Capturas
+
+| Stack                     | Proyectos                        | Contacto                       |
+| ------------------------- | -------------------------------- | ------------------------------ |
+| ![Hero](./docs/stack.png) | ![Projects](./docs/projects.png) | ![Contact](./docs/contact.png) |
+
+---
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE](LICENSE) para más detalles.
