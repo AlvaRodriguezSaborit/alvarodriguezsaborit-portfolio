@@ -46,6 +46,6 @@ export const projectsData: ProjectsSectionProps[] = [
     isAppInLive: true,
     codeLink:
       "https://github.com/AlvaRodriguezSaborit/alvarodriguezsaborit-portfolio",
-    liveAppLink: "https://heladerialamura.es/",
+    liveAppLink: "https://www.alvarodriguezsabor.it/",
   },
 ];
